@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .bg-img {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+  }
+  .bg-img-xs {
+    display: none;
+  }
+  
+  .container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+
+  }
+  
+  section {
+    border: var(--debug-red);
+  }
+  
+  section.card-display {
+    flex: 0 1 600px;
+    color: hsl(0, 0%, 100%);
+    border: var(--debug-blue);
+    float: left;
+  }
