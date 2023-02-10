@@ -245,3 +245,90 @@ button:hover {
   font-weight: 500;
   color: hsl(279, 6%, 55%);
 }
+button#continue {
+    margin-top: 25px;
+    width: 350px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media screen and (min-width: 2560px) {
+    .card-front {
+      left: 28.5%;
+      top: 33%;
+    }
+    .card-back {
+      left: 31%;
+      bottom: 33%;
+    }
+    form {
+      top: 38%;
+      right: 33%;
+    }
+    .thank-you {
+      right: 33%;
+    }
+  }
+  
+  /* 1440px */
+  @media screen and (max-width: 1440px) {
+    .card-front {
+      left: 19%;
+      top: 20%;
+    }
+    .card-back {
+      left: 25%;
+      bottom: 20%;
+    }
+    form {
+      right: 15%;
+      top: 30%;
+    }
+    .thank-you {
+      right: 15%;
+      top: 33%;
+    }
+  }
+  
+  @media screen and (max-width: 1366px) {
+    form {
+      top: 200px;
+      right: 200px;
+    }
+
+    .card-front {
+      top: 17%;
+      left: 18%;
+    }
+
+    .card-back {
+      bottom: 16%;
+      left: 23%;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .bg-img {
+      width: 35%;
+    }
+
+    .card-front {
+      left: 6%;
+      top: 20%;
+    }
+
+    .card-back {
+      left: 12%;
+      bottom: 20%;
+    }
+
+    form {
+      right: 6%;
+    }
+
+    .thank-you {
+      right: 6%;
+    }
+  }
