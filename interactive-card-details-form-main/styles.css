@@ -335,7 +335,7 @@ button#continue {
     body {
       flex-direction: column;
     }
-    
+
     .container {
       flex-direction: column;
     }
@@ -395,4 +395,64 @@ button#continue {
       align-self: flex-end;
     }
   }
+  @media screen and (max-width: 425px) {
+    .bg-img-xs {
+      height: 250px;
+    }
+    
+    .card-back-img,
+    .card-front-img {
+      max-width: 300px;
+    }
+
+    .card-back {
+      left: 90px;
+      top: 30px;
+    }
+    
+    .card-front {
+      top: 125px;
+      left: 30px;
+    }
+
+    .card-number-display {
+      font-size: 14px;
+      bottom: 60px;
+      letter-spacing: 4px;
+    }
+
+    .cardholder-display {
+      font-size: 12px;
+    }
+
+    .expiry-month-display,
+    .expiry-divider-display,
+    .expiry-year-display {
+      font-size: 12px;
+    }
+
+    .expiry-year-display {
+      right: 38px;
+    }
+
+    p.cvc-display {
+      font-size: 12px;
+    }
+
+    .cvc-display {
+      bottom: unset;
+      top: 75px;
+      right: 38px;
+    }
+
+    section.card-details {
+      position: relative;
+      flex: 0 1 65%;
+    }
+
+    form {
+      right: 35px;
+    }
+  }
+  
   
