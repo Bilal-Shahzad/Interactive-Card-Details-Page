@@ -399,12 +399,12 @@ button#continue {
     .bg-img-xs {
       height: 250px;
     }
-    
+
     .card-back-img,
     .card-front-img {
       max-width: 300px;
     }
-
+    
     .card-back {
       left: 90px;
       top: 30px;
@@ -454,5 +454,23 @@ button#continue {
       right: 35px;
     }
   }
+
+  @media screen and (max-width: 375px) {
+  .card-back {
+    left: 60px;
+  }
+
+  .card-front {
+    left: 20px;
+  }
+
+  .card-logo {
+    width: 20%;
+    top: 20px;
+  }
   
+  form {
+    right: 10px;
+  }
+}
   
