@@ -13,3 +13,16 @@ const thankYouSection = document.getElementById("thank-you");
 const continueBtn = document.getElementById("continue");
 const form = document.getElementById("myForm");
 const expiryErrorMsg = document.getElementById("expiry-error");
+
+// Set the innerHTML of the 'nameOnCard' element to the value of the 'cardholder' input field
+// Set the innerHTML of the 'thankYou' element to a string that includes the value of the 'cardholder' input field
+// Check if the 'nameOnCard' element is empty
+// If the 'nameOnCard' element is empty, set its innerHTML to the placeholder value of the 'cardholder' input field
+  
+function inputName() {
+    nameOnCard.innerHTML = cardholder.value;
+    thankYou.innerHTML = `Thank You ${cardholder.value}`;
+    if (nameOnCard.innerHTML == "") {
+      nameOnCard.innerHTML = cardholder.placeholder;
+    }
+  }
