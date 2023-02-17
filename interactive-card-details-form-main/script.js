@@ -26,3 +26,23 @@ function inputName() {
       nameOnCard.innerHTML = cardholder.placeholder;
     }
   }
+//  Create a function where you cant put invalid characters 
+// Split the card number is groups of 4
+
+function inputCardNum() {
+    let cardNumberInput = cardNumber.value;
+    let formattedCardNumber = cardNumberInput.replace(/[^\d]/g, "");
+    formattedCardNumber = formattedCardNumber.substring(0, 16);
+    let cardNumberSections = formattedCardNumber.match(/\d{1,4}/g);
+    if (cardNumberSections !== null) {
+      formattedCardNumber = cardNumberSections.join(" ");
+    }
+      // If the formmattedCardNumber is different to what is shown change the value
+    if (cardNumberInput !== formattedCardNumber) {
+    cardNumber.value = formattedCardNumber;
+    }
+    numOnCard.innerHTML = cardNumber.value;
+    if (cardNumber.value === "") {
+    numOnCard.innerHTML = cardNumber.placeholder;
+  }
+}
