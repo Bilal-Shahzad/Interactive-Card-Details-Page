@@ -74,3 +74,20 @@ function inputMM() {
     }
   }
   
+  function inputYY() {
+    // Get the value of the second element of the 'expiry' array and store it in a variable called 'formattedYY'
+    let formattedYY = expiry[1].value;
+    // Extract the first four characters of 'formattedYY' and store it back into 'formattedYY'
+    formattedYY = formattedYY.substring(0, 4);
+    // Set the value of the second element of the 'expiry' array to 'formattedYY'
+    expiry[1].value = formattedYY;
+    // Check if the value of the second element of the 'expiry' array is empty
+    if (expiry[1].value === "") {
+      // If it is empty, set the innerHTML of the 'expYY' element to "0000"
+      expYY.innerHTML = "0000";
+    } else {
+      // If it is not empty, set the innerHTML of the 'expYY' element to the value of the second element of the 'expiry' array
+      expYY.innerHTML = expiry[1].value;
+    }
+  }
+  
