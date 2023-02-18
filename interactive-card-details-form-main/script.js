@@ -46,3 +46,31 @@ function inputCardNum() {
     numOnCard.innerHTML = cardNumber.placeholder;
   }
 }
+
+function inputMM() {
+    let formattedMM = expiry[0].value;
+    formattedMM = formattedMM.substring(0, 2);
+    expiry[0].value = formattedMM;
+    if (expiry[0].value === "") {
+      expMM.innerHTML = "00";
+    } else {
+      expMM.innerHTML = expiry[0].value;
+    }
+  }
+  function inputMM() {
+    // Get the value of the first element of the 'expiry' array and store it in a variable called 'formattedMM'
+    let formattedMM = expiry[0].value;
+    // Extract the first two characters of 'formattedMM' and store it back into 'formattedMM'
+    formattedMM = formattedMM.substring(0, 2);
+    // Set the value of the first element of the 'expiry' array to 'formattedMM'
+    expiry[0].value = formattedMM;
+    // Check if the value of the first element of the 'expiry' array is empty
+    if (expiry[0].value === "") {
+      // If it is empty, set the innerHTML of the 'expMM' element to "00"
+      expMM.innerHTML = "00";
+    } else {
+      // If it is not empty, set the innerHTML of the 'expMM' element to the value of the first element of the 'expiry' array
+      expMM.innerHTML = expiry[0].value;
+    }
+  }
+  
