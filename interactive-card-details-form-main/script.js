@@ -125,4 +125,20 @@ function inputMM() {
       }
     }
   }
+
+  function validateCard() {
+    // Get the card number error message element and store it in a variable called cardNumError
+    let cardNumError = document.getElementById("card-num-error");
+    // Check if the length of the value of the cardNumber input element is greater than 0 and less than 16
+    if (cardNumber.value.length > 0 && cardNumber.value.length < 16) {
+      // If it is, set the innerHTML of the 'cardNumError' element to Wrong format
+      cardNumError.innerHTML = "Wrong format!";
+    } else if (cardNumber.value == "") {
+      // If the value of the cardNumber input element is empty set the innerHTML of the cardNumError element to "Can't be blank!"
+      cardNumError.innerHTML = "Can't be blank!";
+    } else {
+      // If the value of the cardNumber input element is not empty and has a length of 16 or greater clear the innerHTML of the cardNumError element
+      cardNumError.innerHTML = "";
+    }
+  }
   
