@@ -90,4 +90,39 @@ function inputMM() {
       expYY.innerHTML = expiry[1].value;
     }
   }
+
+  function inputCvc() {
+    // Get the value of the cvc input element and store it in a variable called 'formattedCvc'
+    let formattedCvc = cvc.value;
+    // Extract the first three characters of formattedCvc and store it back into 'formattedCvc'
+    formattedCvc = formattedCvc.substring(0, 3);
+    // Set the value of the 'cvc' input element to formattedCvc
+    cvc.value = formattedCvc;
+    // Check if the value of the cvc input element is empty
+    if (cvc.value === "") {
+      // If it is empty, set the innerHTML of the cvcDisplay element to 000
+      cvcDisplay.innerHTML = "000";
+    } else {
+      // If it is not empty, set the innerHTML of the cvcDisplay element to the value of the 'cvc' input element
+      cvcDisplay.innerHTML = cvc.value;
+    }
+  }
+  
+  function massValidate() {
+    // Define a nested function called validateName
+    function validateName() {
+      // Define a regular expression pattern for a cardholder name
+      let cardholderExp = /^[A-Z a-z]+$/;
+      // Get the error message element and store it in a variable called errorMsg
+      let errorMsg = document.getElementById("errorMsg");
+      // Check if the value of the 'cardholder' input element matches the regular expression pattern
+      if (cardholder.value.match(cardholderExp)) {
+        // If it matches, clear the content of the error message element
+        errorMsg.textContent = "";
+      } else {
+        // If it does not match, set the content of the error message element to Please enter cardholder name!
+        errorMsg.innerHTML = "Please enter cardholder name!";
+      }
+    }
+  }
   
