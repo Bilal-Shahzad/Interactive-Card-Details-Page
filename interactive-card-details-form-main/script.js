@@ -141,4 +141,29 @@ function inputMM() {
       cardNumError.innerHTML = "";
     }
   }
+  function validateExpiry() {
+    // Create a regular expression for the expiry month and store it in a variable called 'expMonth'
+    let expMonth = /^(0[0-9]|1[1-2]){2}$/;
+    // Create a regular expression for the expiry year and store it in a variable called 'expYear'
+    let expYear = /^[0-9][0-2]{4}$/;
+    // Check if the value of the first element in the 'expiry' array matches the 'expMonth' regular expression
+    if (expiry[0].value.match(expMonth)) {
+      // If it does, clear the innerHTML of the 'expiryErrorMsg' element
+      expiryErrorMsg.innerHTML = "";
+    // Check if the value of both the first and second element in the 'expiry' array match the 'expMonth' and 'expYear' regular expressions respectively
+    } else if (
+      expiry[0].value.match(expMonth) &&
+      expiry[1].value.match(expYear)
+    ) {
+      // If they do, clear the innerHTML of the 'expiryErrorMsg' element
+      expiryErrorMsg.innerHTML = "";
+    // Check if the value of the first element in the 'expiry' array is empty
+    } else if (expiry[0] == "") {
+      // If it is, set the innerHTML of the 'expiryErrorMsg' element to "Can't be blank!"
+      expiryErrorMsg.innerHTML = "Can't be blank!";
+    // If none of the above conditions are met, set the innerHTML of the 'expiryErrorMsg' element to "Wrong format!"
+    } else {
+      expiryErrorMsg.innerHTML = "Wrong format!";
+    }
+  }
   
