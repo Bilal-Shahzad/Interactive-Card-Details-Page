@@ -270,6 +270,14 @@ button#continue {
     .thank-you {
       right: 33%;
     }
+    #footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        background:#999;
+     }
   }
   
   @media screen and (max-width: 1440px) {
@@ -289,6 +297,14 @@ button#continue {
       right: 15%;
       top: 33%;
     }
+    #footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        background:#999;
+     }
   }
   
   @media screen and (max-width: 1366px) {
@@ -306,6 +322,14 @@ button#continue {
       bottom: 16%;
       left: 23%;
     }
+    #footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        background:#999;
+     }
   }
   
   @media screen and (max-width: 1024px) {
@@ -330,6 +354,14 @@ button#continue {
     .thank-you {
       right: 6%;
     }
+    #footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        background:#999;
+     }
   }
   @media screen and (max-width: 768px) {
     body {
@@ -394,7 +426,16 @@ button#continue {
       justify-self: end;
       align-self: flex-end;
     }
+    #footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        background:#999;
+     }
   }
+  
   @media screen and (max-width: 425px) {
     .bg-img-xs {
       height: 250px;
@@ -453,7 +494,16 @@ button#continue {
     form {
       right: 35px;
     }
+    #footer {
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        background:#999;
+     }
   }
+
 
   @media screen and (max-width: 375px) {
   .card-back {
@@ -473,6 +523,14 @@ button#continue {
     right: 10px;
   }
 }
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+ }
 
 @media screen and (max-width: 320px) {
     .bg-img-xs {
