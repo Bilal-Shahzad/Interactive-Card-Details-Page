@@ -166,4 +166,24 @@ function inputMM() {
       expiryErrorMsg.innerHTML = "Wrong format!";
     }
   }
+//   // google how to throw checkout errors in javascript card info 
+  function validateCvc() {
+    // Get the error message 
+    let cvcErrorMsg = document.getElementById("error-cvc");
+    //  expression for 3-digit cvc code
+    let cvcExp = /^[0-9]{3}$/;
+    // Sees if cvc code is blank
+    if (cvc.value === "") {
+      // Display error 
+      cvcErrorMsg.innerHTML = "Can't be blank";
+    } else if (cvc.value.match(cvcExp)) { // Check if cvc code matches the regular expression
+      //  Clear error 
+      cvcErrorMsg.innerHTML = "";
+    } else {
+      // Display error 
+      cvcErrorMsg.innerHTML = "Wrong format!";
+    }
+  }
   
+
+// create function where if anything is empty the submit doesnt work
