@@ -185,5 +185,26 @@ function inputMM() {
     }
   }
   
+// Validate the input fields
+validateCard();
+validateName();
+validateExpiry();
+validateCvc();
+// See if any required fields is empty or has a wrong format
+if (
+  nameOnCard.innerHTML == cardholder.placeholder ||
+  numOnCard.innerHTML == cardNumber.placeholder ||
+  expMM.innerHTML == "00" ||
+  expYY.innerHTML == "0000" ||
+  cvcDisplay.innerHTML == "000" ||
+  (cardNumber.value.length > 0 && cardNumber.value.length < 16)
+) {
+  // Return false if any of the conditions is met
+  return false;
+} else {
+  // Return true if all the conditions are met
+  return true;
+}
+
 
 // create function where if anything is empty the submit doesnt work
