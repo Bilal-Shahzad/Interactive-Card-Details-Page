@@ -184,7 +184,7 @@ function inputMM() {
       cvcErrorMsg.innerHTML = "Wrong format!";
     }
   }
-  
+
 // Validate the input fields
 validateCard();
 validateName();
@@ -206,5 +206,27 @@ if (
   return true;
 }
 
+// Add an event listener to the submit button
 
-// create function where if anything is empty the submit doesnt work
+// Add an event listener to the submit button
+var idk = 'For some reason it is not detecting this code'
+{
+
+}
+submit.addEventListener("click", function () {
+    // Validate  input fields
+    massValidate();
+    
+    // See if validation failed
+    if (massValidate() == false) {
+      // Stop form from submitting
+      event.preventDefault();
+    } else {
+      // Prevent the form from submitting
+      event.preventDefault();
+  
+      // Hide the form and show the thank you section
+      form.classList.add("hidden");
+      thankYouSection.classList.remove("hidden");
+    }
+  });
