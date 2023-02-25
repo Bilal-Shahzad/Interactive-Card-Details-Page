@@ -216,17 +216,39 @@ var idk = 'For some reason it is not detecting this code'
 submit.addEventListener("click", function () {
     // Validate  input fields
     massValidate();
-    
     // See if validation failed
     if (massValidate() == false) {
       // Stop form from submitting
       event.preventDefault();
     } else {
-      // Prevent the form from submitting
+      // Stop the form from submitting
       event.preventDefault();
-  
       // Hide the form and show the thank you section
       form.classList.add("hidden");
       thankYouSection.classList.remove("hidden");
     }
   });
+  // Add a click to the continueBtn element
+continueBtn.addEventListener("click", function () {
+    // Prevent the default action of the event
+    event.preventDefault();
+    // Hide the thankYouSection element and show the form element
+    thankYouSection.classList.add("hidden");
+    form.classList.remove("hidden");
+    // Set the nameOnCard and numOnCard elements to the placeholder values of the cardholder 
+    nameOnCard.innerHTML = cardholder.placeholder;
+    numOnCard.innerHTML = cardNumber.placeholder;
+    // Set the MM YY cvcDisplay normal values
+    expMM.innerHTML = "00";
+    expYY.innerHTML = "0000";
+    cvcDisplay.innerHTML = "000";
+    // Reset the input field values and error message
+    cardholder.value = "";
+    cardNumber.value = "";
+    expiry[0].value = "";
+    expiry[1].value = "";
+    cvc.value = "";
+    expiryErrorMsg.innerHTML = "";
+  
+  });
+  
